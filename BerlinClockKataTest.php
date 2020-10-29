@@ -108,5 +108,14 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("JJRJJRJJRJJ", $actual);
     }
 
+    public function test_convert_givenHourMod5Equals0_ShouldReturnXXXX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateHourToBerlinClokTime("00");
+
+        $this->assertEquals("XXXX", $actual);
+    }
+
 
 }
