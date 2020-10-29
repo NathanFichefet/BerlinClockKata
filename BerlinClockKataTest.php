@@ -90,4 +90,12 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("JJRJJRXXXXX", $actual);
     }
 
+    public function test_convert_given45MinutesAbove5_ShouldReturnJJRJJRJJRXX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("45");
+
+        $this->assertEquals("JJRJJRJJRXX", $actual);
+    }
 }
