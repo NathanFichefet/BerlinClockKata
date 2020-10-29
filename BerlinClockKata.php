@@ -64,4 +64,22 @@ class BerlinClockKata {
         }
     }
 
+    public function translateAbove5HoursToBerlinClokTime(string $hours) : string {
+        $lights = "";
+        $hoursEnInt = intval($hours);
+        if ($hoursEnInt >= 5) {
+            $nbrLights = $hoursEnInt / 5;
+            $nbrLightsEnInt = intval($nbrLights);
+            for ($i = 0; $i < 4; $i++) {
+                if ($i < $nbrLightsEnInt) {
+                    $lights .= 'R';
+                }else{
+                    $lights .= 'X';
+                }
+            }
+            return $lights;
+        }
+        return $lights = "XXXX";
+    }
+
 }
