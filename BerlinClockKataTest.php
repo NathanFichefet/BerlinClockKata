@@ -5,8 +5,9 @@ require "BerlinClockKata.php";
 
 use PHPUnit\Framework\TestCase;
 
-define("today",date("H:i:s"));
 date_default_timezone_set('Europe/Brussels');
+define("today",date("H:i:s"));
+
 
 class BerlinClockKataTest extends TestCase {
 
