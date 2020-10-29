@@ -7,14 +7,13 @@ use PHPUnit\Framework\TestCase;
 
 define("today",date("H:i:s"));
 
-class BerlinClockKataTest extends TestCase
-{
+class BerlinClockKataTest extends TestCase {
 
     public function test_convert_givenMinutesMod5Equals0_shouldReturnAllLightsOff(){
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateToBerlinClokTime('00:00:00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('00');
 
         $this->assertEquals("XXXX", $actual);
     }
@@ -23,7 +22,7 @@ class BerlinClockKataTest extends TestCase
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateToBerlinClokTime('00:01:00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('01');
 
         $this->assertEquals("JXXX", $actual);
     }
@@ -32,7 +31,7 @@ class BerlinClockKataTest extends TestCase
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateToBerlinClokTime('00:02:00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('02');
 
         $this->assertEquals("JJXX", $actual);
     }
@@ -41,7 +40,7 @@ class BerlinClockKataTest extends TestCase
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateToBerlinClokTime('00:03:00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('03');
 
         $this->assertEquals("JJJX", $actual);
     }
@@ -50,9 +49,18 @@ class BerlinClockKataTest extends TestCase
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateToBerlinClokTime('00:04:00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime("04");
 
         $this->assertEquals("JJJJ", $actual);
+    }
+
+    public function test_convert_givenMinutesEquals5_ShouldReturnJXXXXXXXXXX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("05");
+
+        $this->assertEquals("JXXXXXXXXXX", $actual);
     }
 
 }
