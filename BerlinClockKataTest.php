@@ -180,4 +180,13 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("RRXX", $actual);
     }
 
+    public function test_convert_given15HoursAbove5_ShouldReturnRRRX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("15");
+
+        $this->assertEquals("RRRX", $actual);
+    }
+
 }
