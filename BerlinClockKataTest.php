@@ -28,4 +28,13 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("JXXX", $actual);
     }
 
+    public function test_convert_givenMinutesMod5Equals2_shouldReturnJJXX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateToBerlinClokTime('00:02:00');
+
+        $this->assertEquals("JJXX", $actual);
+    }
+
 }
