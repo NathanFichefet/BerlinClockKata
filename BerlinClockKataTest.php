@@ -13,7 +13,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('00');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClockTime('00');
 
         $this->assertEquals("XXXX", $actual);
     }
@@ -22,7 +22,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('01');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClockTime('01');
 
         $this->assertEquals("JXXX", $actual);
     }
@@ -31,7 +31,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('02');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClockTime('02');
 
         $this->assertEquals("JJXX", $actual);
     }
@@ -40,7 +40,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime('03');
+        $actual = $BerlinClockKata->translateMinuteToBerlinClockTime('03');
 
         $this->assertEquals("JJJX", $actual);
     }
@@ -49,7 +49,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateMinuteToBerlinClokTime("04");
+        $actual = $BerlinClockKata->translateMinuteToBerlinClockTime("04");
 
         $this->assertEquals("JJJJ", $actual);
     }
@@ -58,7 +58,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("05");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("05");
 
         $this->assertEquals("JXXXXXXXXXX", $actual);
     }
@@ -67,7 +67,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("10");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("10");
 
         $this->assertEquals("JJXXXXXXXXX", $actual);
     }
@@ -76,7 +76,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("15");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("15");
 
         $this->assertEquals("JJRXXXXXXXX", $actual);
     }
@@ -85,7 +85,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("30");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("30");
 
         $this->assertEquals("JJRJJRXXXXX", $actual);
     }
@@ -94,7 +94,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("45");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("45");
 
         $this->assertEquals("JJRJJRJJRXX", $actual);
     }
@@ -103,7 +103,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClokTime("55");
+        $actual = $BerlinClockKata->translateAbove5MinuteToBerlinClockTime("55");
 
         $this->assertEquals("JJRJJRJJRJJ", $actual);
     }
@@ -112,7 +112,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateHourToBerlinClokTime("00");
+        $actual = $BerlinClockKata->translateHourToBerlinClockTime("00");
 
         $this->assertEquals("XXXX", $actual);
     }
@@ -121,7 +121,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateHourToBerlinClokTime("01");
+        $actual = $BerlinClockKata->translateHourToBerlinClockTime("01");
 
         $this->assertEquals("RXXX", $actual);
     }
@@ -130,7 +130,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateHourToBerlinClokTime("02");
+        $actual = $BerlinClockKata->translateHourToBerlinClockTime("02");
 
         $this->assertEquals("RRXX", $actual);
     }
@@ -139,7 +139,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateHourToBerlinClokTime("03");
+        $actual = $BerlinClockKata->translateHourToBerlinClockTime("03");
 
         $this->assertEquals("RRRX", $actual);
     }
@@ -148,7 +148,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateHourToBerlinClokTime("04");
+        $actual = $BerlinClockKata->translateHourToBerlinClockTime("04");
 
         $this->assertEquals("RRRR", $actual);
     }
@@ -157,7 +157,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("01");
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClockTime("01");
 
         $this->assertEquals("XXXX", $actual);
     }
@@ -166,7 +166,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("05");
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClockTime("05");
 
         $this->assertEquals("RXXX", $actual);
     }
@@ -175,7 +175,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("10");
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClockTime("10");
 
         $this->assertEquals("RRXX", $actual);
     }
@@ -184,7 +184,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("15");
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClockTime("15");
 
         $this->assertEquals("RRRX", $actual);
     }
@@ -193,7 +193,7 @@ class BerlinClockKataTest extends TestCase {
 
         $BerlinClockKata = new BerlinClockKata();
 
-        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("20");
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClockTime("20");
 
         $this->assertEquals("RRRR", $actual);
     }
