@@ -162,4 +162,13 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("XXXX", $actual);
     }
 
+    public function test_convert_given5HourAbove5_ShouldReturnXXXX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateAbove5HoursToBerlinClokTime("05");
+
+        $this->assertEquals("RXXX", $actual);
+    }
+
 }
