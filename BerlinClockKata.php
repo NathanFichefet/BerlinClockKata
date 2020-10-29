@@ -27,7 +27,6 @@ class BerlinClockKata {
         }
     }
 
-
    public function translateAbove5MinuteToBerlinClokTime(string $minute) : string {
        $lights = "";
        $minuteEnInt = intval($minute);
@@ -49,4 +48,6 @@ class BerlinClockKata {
        }
        return $lights = "XXXXXXXXXXX";
    }
+
+
 }
