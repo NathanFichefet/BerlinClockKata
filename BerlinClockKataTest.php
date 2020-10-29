@@ -9,6 +9,7 @@ define("today",date("H:i:s"));
 
 class BerlinClockKataTest extends TestCase {
 
+
     public function test_convert_givenMinutesMod5Equals0_shouldReturnAllLightsOff(){
 
         $BerlinClockKata = new BerlinClockKata();
@@ -215,4 +216,16 @@ class BerlinClockKataTest extends TestCase {
 
         $this->assertEquals("X", $actual);
     }
+
+    public function testTranslateSecondToBerlinClockTime(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateToBerlinClokTime(today);
+
+        $this->assertEquals($actual, $actual);
+
+        echo $actual;
+    }
+
 }
