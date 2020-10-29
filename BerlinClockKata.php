@@ -9,7 +9,7 @@ class BerlinClockKata {
         $minutes = substr($naturalHour, 3, 2)."\n";  // Minute
         $hours = substr($naturalHour, 0, 2)."\n";  // Hours
 
-        return $this->translateHourToBerlinClokTime($hours)."\n".$this->translateAbove5MinuteToBerlinClokTime($minutes)."\n".$this->translateMinuteToBerlinClokTime($minutes);
+        return $this->translateAbove5HoursToBerlinClokTime($hours)."\n".$this->translateHourToBerlinClokTime($hours)."\n".$this->translateAbove5MinuteToBerlinClokTime($minutes)."\n".$this->translateMinuteToBerlinClokTime($minutes);
     }
 
     public function translateMinuteToBerlinClokTime(string $minute) : string {
