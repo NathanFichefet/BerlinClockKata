@@ -135,5 +135,14 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("RRXX", $actual);
     }
 
+    public function test_convert_givenHourMod5Equals3_ShouldReturnRRRX(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateHourToBerlinClokTime("03");
+
+        $this->assertEquals("RRRX", $actual);
+    }
+
 
 }
