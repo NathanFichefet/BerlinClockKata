@@ -198,4 +198,12 @@ class BerlinClockKataTest extends TestCase {
         $this->assertEquals("RRRR", $actual);
     }
 
+    public function test_convert_givenPairSeconds_ShouldReturnR(){
+
+        $BerlinClockKata = new BerlinClockKata();
+
+        $actual = $BerlinClockKata->translateSecondToBerlinClockTime("02");
+
+        $this->assertEquals("R", $actual);
+    }
 }

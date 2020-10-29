@@ -82,5 +82,12 @@ class BerlinClockKata {
         return $lights = "XXXX";
     }
 
-
+    public function translateSecondToBerlinClockTime(string $seconds) : string {
+        $secondsEnInt = intval($seconds);
+        if($secondsEnInt % 2 == 0){
+            return 'R';
+        }else{
+            return 'X';
+        }
+    }
 }
